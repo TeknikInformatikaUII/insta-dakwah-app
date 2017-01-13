@@ -33,11 +33,6 @@ public class BaseActivity extends AppCompatActivity {
         return true;
     }
 
-    //without inject
-    public void setContentViewWithoutInject(int layoutResId) {
-        super.setContentView(layoutResId);
-    }
-
     protected void bindViews() {
         ButterKnife.bind(this);
         setupToolbar();
@@ -67,8 +62,4 @@ public class BaseActivity extends AppCompatActivity {
         return resourceId > 0 ? getResources().getDimensionPixelSize(resourceId) : 0;
     }
 
-    @Nullable
-    public Toolbar getToolbar() {
-        return toolbar;
-    }
 }
