@@ -1,42 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/root"
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="io.instadakwah.instadakwah.ui.HomeActivity"
+        tools:targetApi="LOLLIPOP">
+
+    <android.support.v4.widget.DrawerLayout
+            android:id="@+id/dl_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="io.instadakwah.instadakwah.ui.HomeActivity"
-                tools:targetApi="LOLLIPOP">
+                android:orientation="vertical">
 
-    <android.support.design.widget.CoordinatorLayout
-            android:id="@+id/content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-        <android.support.design.widget.AppBarLayout
-                android:id="@+id/app_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:elevation="4dp"
-                android:minHeight="?attr/actionBarSize">
-
-            <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar_main"
+            <android.support.design.widget.AppBarLayout
+                    android:id="@+id/app_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:theme="@style/AppTheme.Toolbar"
-                    android:minHeight="?attr/actionBarSize"
-                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
-        </android.support.design.widget.AppBarLayout>
+                    android:background="@color/colorAccent"
+                    android:elevation="4dp"
+                    android:minHeight="?attr/actionBarSize">
 
-        <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv"
+                <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:theme="@style/AppTheme.Toolbar"
+                        android:minHeight="?attr/actionBarSize"
+                        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_below="@id/app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+                android:id="@+id/nv_main"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scrollbars="none"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
-    </android.support.design.widget.CoordinatorLayout>
-</RelativeLayout>
+                android:layout_gravity="start"
+                app:headerLayout="@layout/view_navigation_header"
+                app:itemBackground="@drawable/bg_menu"
+                app:itemIconTint="@color/colorPrimary"
+                app:itemTextColor="@color/colorPrimary"
+                app:menu="@menu/menu_drawer"/>
+    </android.support.v4.widget.DrawerLayout>
+</android.support.design.widget.CoordinatorLayout>

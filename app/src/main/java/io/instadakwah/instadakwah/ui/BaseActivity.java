@@ -42,7 +42,6 @@ public class BaseActivity extends AppCompatActivity {
         if (toolbar != null) {
             toolbar.setPadding(0, getStatusBarHeight(), 0, 0);
             setSupportActionBar(toolbar);
-            toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
         }
     }
 

@@ -3,9 +3,11 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="minimum_space_between_views">8dp</dimen>
+    <dimen name="medium_space_between_views">16dp</dimen>
 
     <!-- Text size -->
     <dimen name="text_size_small">14sp</dimen>
     <dimen name="text_size_medium">18sp</dimen>
 
+    <dimen name="nav_header_height">164dp</dimen>
 </resources>

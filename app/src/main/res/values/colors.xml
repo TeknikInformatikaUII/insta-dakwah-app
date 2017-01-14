@@ -16,4 +16,6 @@
     <color name="btn_context_menu_pressed">#40000000</color>
     <color name="btn_context_menu_text_red">#ffff0000</color>
 
+    <color name="colorMenu">#E0E0E0</color>
+
 </resources>
