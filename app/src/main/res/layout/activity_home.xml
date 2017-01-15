@@ -61,8 +61,8 @@
                 android:background="@color/navBackground"
                 android:layout_gravity="start"
                 app:headerLayout="@layout/view_navigation_header"
-                app:itemIconTint="@color/grey_font"
-                app:itemTextColor="@color/grey_font"
+                app:itemIconTint="@drawable/drawer_onpress"
+                app:itemTextColor="@drawable/drawer_onpress"
                 app:menu="@menu/menu_drawer"/>
     </android.support.v4.widget.DrawerLayout>
 </android.support.design.widget.CoordinatorLayout>

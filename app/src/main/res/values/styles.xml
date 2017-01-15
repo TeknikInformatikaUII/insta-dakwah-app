@@ -23,5 +23,4 @@
     <style name="TextStyleCustom">
         <item name="android:textColor">@color/white_font</item>
     </style>
-
 </resources>
