@@ -28,19 +28,20 @@ import butterknife.ButterKnife;
 import io.instadakwah.instadakwah.R;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
-    private MenuItem mMenuItem;
-
     @BindView(R.id.dl_main)
     DrawerLayout mDrawerLayout;
-    ActionBarDrawerToggle mActionBarDrawerToggle;
 
     @BindView(R.id.nv_main)
     NavigationView navigationView;
 
-    ImageView drawAvatar;
-    TextView nameAvatar;
-    LinearLayout navHeader;
+    private ActionBarDrawerToggle mActionBarDrawerToggle;
+    private MenuItem mMenuItem;
+
     private Context context = HomeActivity.this;
+
+    private ImageView drawAvatar;
+    private TextView nameAvatar;
+    private LinearLayout navHeader;
     private static final String URL = "https://cdn-images-1.medium.com/fit/c/100/100/1*_Lm5zgfjlNN3RBCCe6rSwA.jpeg";
 
     @Override
@@ -58,9 +59,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         drawAvatar = (ImageView) hView.findViewById(R.id.avatar_image);
         nameAvatar = (TextView) hView.findViewById(R.id.avatar_name);
         nameAvatar.setText("Wisnu Kurniawan");
-
         navHeader.setOnClickListener(this);
-
         setUpAvatar();
     }
 
@@ -105,8 +104,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void addNavListener(final Toolbar toolbar, final NavigationView navigationView) {
-        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-                toolbar, R.string.drawer_open, R.string.drawer_close) {
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,
+                R.string.drawer_open, R.string.drawer_close) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
