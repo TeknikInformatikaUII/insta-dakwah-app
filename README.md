@@ -1,3 +1,5 @@
+![Home - skeleton](https://raw.githubusercontent.com/TeknikInformatikaUII/insta-dakwah-app/master/assets/home.png) ![About - skeleton](https://raw.githubusercontent.com/TeknikInformatikaUII/insta-dakwah-app/master/assets/about.png) ![Menu drawer - skeleton](https://raw.githubusercontent.com/TeknikInformatikaUII/insta-dakwah-app/master/assets/menu%20drawer.png)
+
 Team Developer
 ====
 - Hanif
@@ -11,5 +13,3 @@ Team Developer
 - [ ] just clone or pull
 - [ ] see todo
 - [ ] nganu
-
-![Home - skeleton](https://raw.githubusercontent.com/TeknikInformatikaUII/insta-dakwah-app/master/assets/home.png) ![About - skeleton](https://raw.githubusercontent.com/TeknikInformatikaUII/insta-dakwah-app/master/assets/about.png) ![Menu drawer - skeleton](https://raw.githubusercontent.com/TeknikInformatikaUII/insta-dakwah-app/master/assets/menu%20drawer.png)
