@@ -27,7 +27,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.instadakwah.instadakwah.R;
 
-public class HomeActivity extends BaseActivity {
+public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private MenuItem mMenuItem;
 
     @BindView(R.id.dl_main)
@@ -53,18 +53,13 @@ public class HomeActivity extends BaseActivity {
         addNavListener(toolbar, navigationView);
         mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
 
-        View hView =  navigationView.getHeaderView(0);
+        View hView = navigationView.getHeaderView(0);
         navHeader = (LinearLayout) hView.findViewById(R.id.nav_header);
         drawAvatar = (ImageView) hView.findViewById(R.id.avatar_image);
         nameAvatar = (TextView) hView.findViewById(R.id.avatar_name);
         nameAvatar.setText("Wisnu Kurniawan");
 
-        navHeader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "Header", Toast.LENGTH_SHORT).show();
-            }
-        });
+        navHeader.setOnClickListener(this);
 
         setUpAvatar();
     }
@@ -97,7 +92,7 @@ public class HomeActivity extends BaseActivity {
         });
     }
 
-    public void setUpAvatar(){
+    public void setUpAvatar() {
         Glide.with(context).load(URL).asBitmap().centerCrop().into(new BitmapImageViewTarget(drawAvatar) {
             @Override
             protected void setResource(Bitmap resource) {
@@ -141,10 +136,29 @@ public class HomeActivity extends BaseActivity {
         switch (itemId) {
             case R.id.menu_setting: {
                 Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
+                mMenuItem = null;
+                // TODO: 15/01/2017 Go to setting..
                 break;
             }
             case R.id.menu_about: {
                 showAbout();
+                break;
+            }
+            case R.id.menu_logout: {
+                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+                mMenuItem = null;
+                // TODO: 15/01/2017 Logout here...
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.nav_header: {
+                Toast.makeText(context, "Profile", Toast.LENGTH_SHORT).show();
+                // TODO: 15/01/2017 Go to profile..
                 break;
             }
         }
