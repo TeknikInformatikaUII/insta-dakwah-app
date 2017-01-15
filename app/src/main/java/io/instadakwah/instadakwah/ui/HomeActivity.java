@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class HomeActivity extends BaseActivity {
 
     ImageView drawAvatar;
     TextView nameAvatar;
+    LinearLayout navHeader;
     private Context context = HomeActivity.this;
     private static final String URL = "https://cdn-images-1.medium.com/fit/c/100/100/1*_Lm5zgfjlNN3RBCCe6rSwA.jpeg";
 
@@ -50,9 +52,18 @@ public class HomeActivity extends BaseActivity {
         mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
 
         View hView =  navigationView.getHeaderView(0);
+        navHeader = (LinearLayout) hView.findViewById(R.id.nav_header);
         drawAvatar = (ImageView) hView.findViewById(R.id.avatar_image);
         nameAvatar = (TextView) hView.findViewById(R.id.avatar_name);
         nameAvatar.setText("Wisnu Kurniawan");
+
+        navHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Header", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         setUpAvatar();
     }
 
@@ -76,7 +87,7 @@ public class HomeActivity extends BaseActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 mMenuItem = item;
-                mMenuItem.setCheckable(true);
+                mMenuItem.setCheckable(false);
                 mDrawerLayout.closeDrawers();
 
                 return true;

@@ -9,5 +9,5 @@
     <dimen name="text_size_small">14sp</dimen>
     <dimen name="text_size_medium">18sp</dimen>
 
-    <dimen name="nav_header_height">164dp</dimen>
+    <dimen name="nav_header_height">208dp</dimen>
 </resources>

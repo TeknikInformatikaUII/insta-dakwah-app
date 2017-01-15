@@ -3,9 +3,13 @@
     <color name="colorPrimary">#00E676</color>
     <color name="colorPrimaryDark">#00C853</color>
     <color name="colorAccent">#00E676</color>
-    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorBackground">#EEEEEE</color>
+    <color name="colorBackgroundWhite">#FFFFFF</color>
+    <color name="navBackground">#F7F7F7</color>
 
     <color name="white_font">#FFFFFF</color>
+    <color name="grey_font">#8B8B8B</color>
+    <color name="black_font">#000000</color>
 
     <color name="btn_default_light_normal">#00000000</color>
     <color name="btn_default_light_pressed">#40ffffff</color>
@@ -17,5 +21,5 @@
     <color name="btn_context_menu_text_red">#ffff0000</color>
 
     <color name="colorMenu">#E0E0E0</color>
-
+    <color name="colorRipple">#D8D8D8</color>
 </resources>

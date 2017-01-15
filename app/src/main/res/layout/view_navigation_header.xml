@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/nav_header"
               android:layout_width="match_parent"
               android:layout_height="@dimen/nav_header_height"
-              android:background="?attr/colorPrimary"
+              android:background="@drawable/ripple_effect"
+              android:clickable="true"
               android:orientation="vertical"
               android:padding="@dimen/minimum_space_between_views">
     <!--item nav header-->
     <ImageView
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:id="@+id/avatar_image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
             android:scaleType="fitXY"
             android:layout_marginLeft="@dimen/minimum_space_between_views"
+            android:layout_marginBottom="@dimen/medium_space_between_views"
             />
 
     <TextView
             android:id="@+id/avatar_name"
-            android:layout_marginTop="@dimen/minimum_space_between_views"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/minimum_space_between_views"
-            android:textSize="16sp"
-            android:textColor="@color/white_font"/>
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="@color/black_font"
+            android:textSize="15sp"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/minimum_space_between_views"
+            android:text="See profile"
+            android:textColor="@color/grey_font"
+            android:textSize="14sp"/>
 </LinearLayout>

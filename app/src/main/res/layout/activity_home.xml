@@ -51,11 +51,11 @@
                 android:id="@+id/nv_main"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/navBackground"
                 android:layout_gravity="start"
                 app:headerLayout="@layout/view_navigation_header"
-                app:itemBackground="@drawable/bg_menu"
-                app:itemIconTint="@color/colorPrimary"
-                app:itemTextColor="@color/colorPrimary"
+                app:itemIconTint="@color/grey_font"
+                app:itemTextColor="@color/grey_font"
                 app:menu="@menu/menu_drawer"/>
     </android.support.v4.widget.DrawerLayout>
 </android.support.design.widget.CoordinatorLayout>
