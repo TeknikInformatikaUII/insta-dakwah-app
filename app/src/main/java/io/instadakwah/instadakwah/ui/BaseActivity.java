@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -20,6 +21,10 @@ public class BaseActivity extends AppCompatActivity {
     @Nullable
     @BindView(R.id.toolbar_main)
     Toolbar toolbar;
+
+    @Nullable
+    @BindView(R.id.toolbar_title)
+    TextView toolbarTitle;
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
@@ -42,6 +47,8 @@ public class BaseActivity extends AppCompatActivity {
         if (toolbar != null) {
             toolbar.setPadding(0, getStatusBarHeight(), 0, 0);
             setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+            toolbarTitle.setText(getResources().getString(R.string.app_name));
         }
     }
 

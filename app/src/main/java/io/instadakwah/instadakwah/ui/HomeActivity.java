@@ -47,6 +47,7 @@ public class HomeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
+
         setNavListener(navigationView);
         addNavListener(toolbar, navigationView);
         mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);

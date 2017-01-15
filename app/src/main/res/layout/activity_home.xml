@@ -33,8 +33,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:theme="@style/AppTheme.Toolbar"
-                        android:minHeight="?attr/actionBarSize"
-                        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+                        android:minHeight="?attr/actionBarSize">
+                    <TextView
+                            android:id="@+id/toolbar_title"
+                            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"/>
+
+                </android.support.v7.widget.Toolbar>
             </android.support.design.widget.AppBarLayout>
 
             <android.support.v7.widget.RecyclerView
