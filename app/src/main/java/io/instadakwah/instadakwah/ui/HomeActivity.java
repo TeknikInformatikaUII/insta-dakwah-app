@@ -155,5 +155,6 @@ public class HomeActivity extends BaseActivity {
         View view = getLayoutInflater().inflate(R.layout.view_bottom_sheet_about, null);
         bottomSheetDialog.setContentView(view);
         bottomSheetDialog.show();
+        mMenuItem = null;
     }
 }
