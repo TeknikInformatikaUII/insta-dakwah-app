@@ -57,7 +57,8 @@ public class BaseActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id){
             case R.id.action_upload_image:
-                Toast.makeText(this, "upload... upload", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Upload", Toast.LENGTH_SHORT).show();
+                // TODO: 15/01/2017 Upload image here...
                 break;
         }
         return super.onOptionsItemSelected(item);
