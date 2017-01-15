@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.NavigationView;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
@@ -119,9 +120,9 @@ public class HomeActivity extends BaseActivity {
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-//                if (null != mMenuItem) {
-//                    switchNavigationMenu(mMenuItem.getItemId());
-//                }
+                if (null != mMenuItem) {
+                    switchNavigationMenu(mMenuItem.getItemId());
+                }
             }
 
             @Override
@@ -143,9 +144,16 @@ public class HomeActivity extends BaseActivity {
                 break;
             }
             case R.id.menu_about: {
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                showAbout();
                 break;
             }
         }
+    }
+
+    private void showAbout() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        View view = getLayoutInflater().inflate(R.layout.view_buttom_sheet_about, null);
+        bottomSheetDialog.setContentView(view);
+        bottomSheetDialog.show();
     }
 }

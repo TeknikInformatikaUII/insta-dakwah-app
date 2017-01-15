@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="@dimen/medium_space_between_views"
+              android:paddingTop="@dimen/medium_space_between_views">
+
+    <TextView
+            android:layout_marginBottom="@dimen/minimum_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi ini dikembangkan oleh mahasiswa Teknik Informatika UII"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/minimum_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Library &amp; resources"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glide"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Google support"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/minimum_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developer"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wisnu Kurniawan"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yoga Agung"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="M Ifan"/>
+
+
+</LinearLayout>
