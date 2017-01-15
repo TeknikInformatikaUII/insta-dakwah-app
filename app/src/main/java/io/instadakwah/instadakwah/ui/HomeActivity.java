@@ -152,7 +152,7 @@ public class HomeActivity extends BaseActivity {
 
     private void showAbout() {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
-        View view = getLayoutInflater().inflate(R.layout.view_buttom_sheet_about, null);
+        View view = getLayoutInflater().inflate(R.layout.view_bottom_sheet_about, null);
         bottomSheetDialog.setContentView(view);
         bottomSheetDialog.show();
     }
