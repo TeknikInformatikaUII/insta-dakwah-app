@@ -10,7 +10,7 @@
     <!--item nav header-->
     <ImageView
             android:layout_marginTop="37dp"
-            android:id="@+id/avatar_image"
+            android:id="@+id/iv_avatar_image"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:scaleType="fitXY"
@@ -19,7 +19,7 @@
             />
 
     <TextView
-            android:id="@+id/avatar_name"
+            android:id="@+id/tv_avatar_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/minimum_space_between_views"

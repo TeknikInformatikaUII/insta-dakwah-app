@@ -28,21 +28,18 @@ import butterknife.ButterKnife;
 import io.instadakwah.instadakwah.R;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
-    @BindView(R.id.dl_main)
-    DrawerLayout mDrawerLayout;
+    @BindView(R.id.dl_main) DrawerLayout drawerLayout;
+    @BindView(R.id.nv_main) NavigationView navigationView;
 
-    @BindView(R.id.nv_main)
-    NavigationView navigationView;
-
-    private ActionBarDrawerToggle mActionBarDrawerToggle;
+    private ImageView imageAvatar;
+    private TextView nameAvatar;
+    private LinearLayout navHeader;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
     private MenuItem mMenuItem;
 
     private Context context = HomeActivity.this;
 
-    private ImageView drawAvatar;
-    private TextView nameAvatar;
-    private LinearLayout navHeader;
-    private static final String URL = "https://cdn-images-1.medium.com/fit/c/100/100/1*_Lm5zgfjlNN3RBCCe6rSwA.jpeg";
+    private static final String URL_IMAGE_AVATAR = "https://cdn-images-1.medium.com/fit/c/100/100/1*_Lm5zgfjlNN3RBCCe6rSwA.jpeg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,12 +49,13 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
         setNavListener(navigationView);
         addNavListener(toolbar, navigationView);
-        mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
 
         View hView = navigationView.getHeaderView(0);
         navHeader = (LinearLayout) hView.findViewById(R.id.nav_header);
-        drawAvatar = (ImageView) hView.findViewById(R.id.avatar_image);
-        nameAvatar = (TextView) hView.findViewById(R.id.avatar_name);
+        imageAvatar = (ImageView) hView.findViewById(R.id.iv_avatar_image);
+        nameAvatar = (TextView) hView.findViewById(R.id.tv_avatar_name);
+
         nameAvatar.setText("Wisnu Kurniawan");
         navHeader.setOnClickListener(this);
         setUpAvatar();
@@ -65,8 +63,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onBackPressed() {
-        if (mDrawerLayout.isDrawerVisible(GravityCompat.START)) {
-            mDrawerLayout.closeDrawers();
+        if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
+            drawerLayout.closeDrawers();
         } else {
             finish();
         }
@@ -75,7 +73,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        mActionBarDrawerToggle.syncState();
+        actionBarDrawerToggle.syncState();
     }
 
     private void setNavListener(NavigationView navigationView) {
@@ -84,7 +82,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 mMenuItem = item;
                 mMenuItem.setCheckable(false);
-                mDrawerLayout.closeDrawers();
+                drawerLayout.closeDrawers();
 
                 return true;
             }
@@ -92,19 +90,19 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     }
 
     public void setUpAvatar() {
-        Glide.with(context).load(URL).asBitmap().centerCrop().into(new BitmapImageViewTarget(drawAvatar) {
+        Glide.with(context).load(URL_IMAGE_AVATAR).asBitmap().centerCrop().into(new BitmapImageViewTarget(imageAvatar) {
             @Override
             protected void setResource(Bitmap resource) {
                 RoundedBitmapDrawable rounded =
                         RoundedBitmapDrawableFactory.create(context.getResources(), resource);
                 rounded.setCircular(true);
-                drawAvatar.setImageDrawable(rounded);
+                imageAvatar.setImageDrawable(rounded);
             }
         });
     }
 
     private void addNavListener(final Toolbar toolbar, final NavigationView navigationView) {
-        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.drawer_open, R.string.drawer_close) {
             @Override
             public void onDrawerOpened(View drawerView) {

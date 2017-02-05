@@ -18,8 +18,7 @@ import io.instadakwah.instadakwah.R;
 
 public class BaseActivity extends AppCompatActivity {
     @Nullable
-    @BindView(R.id.toolbar_main)
-    Toolbar toolbar;
+    @BindView(R.id.toolbar_main) Toolbar toolbar;
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
