@@ -4,6 +4,7 @@ This project is follow this guidelines
 ====
 - https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md
 - https://github.com/ribot/ribot-app-android/blob/master/README.md
+- https://github.com/ribot/android-guidelines/blob/master/architecture_guidelines/android_architecture.md
 
 Team Developer
 ====
